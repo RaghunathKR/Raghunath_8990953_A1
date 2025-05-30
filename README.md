@@ -67,5 +67,5 @@ To avoid using external tools like `bc` (which is not available in Git Bash by d
 ### 1. Run the Main Script
 
 ```bash
-bash main.sh
+bash test.sh
 
