@@ -9,6 +9,12 @@ calculate_volume() {
   local height=$1
   local width=$2
   local length=$3
+
+   # Check if all three arguments are provided
+  if [[ -z "$height" || -z "$width" || -z "$length" ]]; then
+    echo "Error: Missing input. Please provide height, width, and length." >&2
+    exit 1
+  fi
 # Validate all inputs
   if ! is_integer "$height" || ! is_integer "$width" || ! is_integer "$length"; then
     echo "Error: All dimensions must be integers." >&2
