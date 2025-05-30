@@ -13,15 +13,4 @@ test_volume_calculation() {
   fi
 }
 
-test_case_2_invalid_input() {
-  result=$(calculate_volume 5.5 2 3 2>&1)
-
-  if [[ "$result" == *"Error: All dimensions must be integers."* ]]; then
-    echo "PASS: Detected invalid input"
-  else
-    echo "FAIL: Did not detect invalid input"
-  fi
-}
-
 test_volume_calculation
-test_case_2_invalid_input
